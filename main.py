@@ -14,7 +14,7 @@ layout = [
   [sg.Text(description, size=(30,3))],
   [sg.Text("Temperature (F): "), sg.Input(size=(3, 1), key='-TEMP-')],
   [sg.Text("Wind Speed (mph): "), sg.Input(size=(3, 1), key='-WIND-')],
-  [sg.Button('Get Wind Speed'), sg.Button('Exit')],
+  [sg.Button('Get Wind Chill'), sg.Button('Exit')],
   [sg.Text(results, size=(30,3), key ='OUTPUT')]
 ]
 
@@ -34,7 +34,7 @@ while True:
 
     # Output results
     msg = "You entered {} and {}".format(temp,wind)
-    window['-OUTPUT'].update(msg)
+    window['OUTPUT'].update(msg)
 
 # Close the window, very confusing
 window.close()
